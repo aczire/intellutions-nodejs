@@ -1,0 +1,10 @@
+version: '2.1'
+
+services:
+  intellutions-nodejs:
+    image: intellutions-nodejs
+    build: .
+    environment:
+      NODE_ENV: production
+    ports:
+      - 55310:55310

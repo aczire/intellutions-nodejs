@@ -1,0 +1,12 @@
+version: '2.1'
+
+services:
+  intellutions-nodejs:
+    image: intellutions-nodejs
+    build: .
+    environment:
+      NODE_ENV: development
+    ports:
+      - 55310:55310
+      - 9229:9229
+    command: node --inspect=0.0.0.0:9229 server.js
